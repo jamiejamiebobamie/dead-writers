@@ -1,31 +1,19 @@
 ## Create React Saga
+
 This repository is bootstrapped with [Create React Saga](https://github.com/sprakash57/create-react-saga).
 
-## Scripts provided
+## Dead Writer Tweet Generator
 
-In the project directory, you can run:
+This is a web app that queries an API I built to generate new text from dead writer's using Markov models of their works.
+##Backend API:
+Github:
+https://github.com/jamiejamiebobamie/textGeneration
+Live site:
+https://re-tweet.herokuapp.com
 
-### `npm start`
+## Past Iterations
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-Application will hot reload if you make any changes.
-
-### `npm test`
-
-Runs all the test cases. Behind the scene create-react-saga uses [jest](https://jestjs.io) and [React Testing Library](https://testing-library.com/docs/react-testing-library/intro).
-
-### `npm build`
-
-Builds the app for production to the `dist` folder.\
-It bundles the app in production mode and optimizes the build for the best performance.
-
-### `npm run storybook`
-
-[Storybook](https://storybook.js.org) is the core of the starter kit. \
-You can view the stories in the browser at http://localhost:6006 after running storybook.
-
-## Learn More
-
-Want to learn more?! See the [Documentation](http://sprakash57.github.io/create-react-saga) in action.
+This website has undergone several iterations:
+#1 Live Site: https://tweet-gen-js.herokuapp.com
+#2 Live Site: https://dead-tweet-gen.herokuapp.com
+#3 Live Site: https://retweeter-twitter-bot.herokuapp.com
