@@ -1,0 +1,74 @@
+.ControlButton {
+  width: 200px;
+  height: 200px;
+  opacity: 1;
+  background-color: transparent;
+  border-color: transparent;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.jar_image {
+  width: 129px;
+  height: 130px;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  -webkit-transition: -webkit-transform 3s ease-in-out;
+  animation: bob 5s steps(55) infinite alternate-reverse;
+  opacity: 1;
+}
+/* stand-in */
+.jar_image:hover {
+  animation: pulse 1s infinite alternate-reverse;
+  opacity: 1;
+}
+
+.tweet_image {
+  width: 73px;
+  height: 71px;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  -webkit-transition: -webkit-transform 3s ease-in-out;
+  animation: fly 0.8s steps(39) infinite;
+  opacity: 1;
+}
+/* stand-in */
+.tweet_image:hover {
+  animation: pulse 1s infinite alternate-reverse;
+  opacity: 1;
+}
+
+@keyframes bob {
+  from {
+    background-position-x: 0px;
+  }
+  to {
+    background-position-x: -7106px;
+  }
+}
+
+@keyframes fly {
+  0% {
+    background-position-x: 0px;
+    transform: translateY(0px) scale(1.5);
+  }
+  50% {
+    transform: translateY(2px) scale(1.5);
+  }
+  100% {
+    background-position-x: -2847px;
+    transform: translateY(0px) scale(1.5);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.1;
+  }
+  100% {
+    transform: scale(1.3);
+    opacity: 1;
+  }
+}

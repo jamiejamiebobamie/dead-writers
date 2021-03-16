@@ -3,7 +3,7 @@ import rootSaga from "./sagas";
 import createSagaMiddleware from "redux-saga";
 import { createStore, applyMiddleware, compose } from "redux";
 
-export default configStore = () => {
+const configStore = () => {
   const sagaMiddleware = createSagaMiddleware();
 
   const composeEnhancers =
@@ -14,10 +14,16 @@ export default configStore = () => {
         })
       : compose;
 
-  const enhancer = composeEnhancers(applyMiddleware(sagaMiddleware));
+  // const enhancer = composeEnhancers(applyMiddleware(sagaMiddleware));
 
-  const store = createStore(reducer, enhancer);
+  const store = createStore(reducer); //, enhancer);
 
-  sagaMiddleware.run(rootSaga);
+  // sagaMiddleware.run(rootSaga);
   return store;
 };
+
+const store = configStore();
+
+console.log(store);
+
+export default store;

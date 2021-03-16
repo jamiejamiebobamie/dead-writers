@@ -1,0 +1,10 @@
+.Controls {
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  justify-content: space-around;
+  width: 100vw;
+  height: 200px;
+  opacity: 0.5;
+  background-color: transparent;
+}

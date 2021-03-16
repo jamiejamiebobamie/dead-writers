@@ -1,21 +1,16 @@
 import React from "react";
-import { connect } from "react-redux";
-import {} from "./actions";
+import { BackgroundVideoContainer } from "./components";
+import { ControlsContainer } from "./components";
 
-export const App = ({ state }) => {
-  const {} = state;
+import "./App.css";
 
+export const App = () => {
   return (
-    <main className="t-center">
-      <h1>hi</h1>
-    </main>
+    <div className="App">
+      <ControlsContainer />
+      <BackgroundVideoContainer />
+    </div>
   );
 };
 
-const mapStateToProps = (state) => ({
-  state: state.userReducer,
-});
-
-const mapDispatchToProps = {};
-
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default App;
