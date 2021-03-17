@@ -1,16 +1,10 @@
 import { combineReducers } from "redux";
-
-const initState = {};
-//
-const userReducer = (state = initState, action) => {
-  switch (action.type) {
-    default:
-      return state;
-  }
-};
+import { quoteReducer } from "./quoteReducer";
+import { videoIndexReducer } from "./videoIndexReducer";
 
 const reducer = combineReducers({
-  userReducer,
+  quoteReducer,
+  videoIndexReducer,
 });
 
 export default reducer;

@@ -1,5 +1,8 @@
+body {
+  background-color: black;
+}
+
 .App {
   margin-top: -7.8px;
   margin-left: -7.8px;
-  background-color: black;
 }

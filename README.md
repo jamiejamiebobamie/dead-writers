@@ -9,7 +9,7 @@ This is a web app that queries an API I built to generate new text from dead wri
 Github:
 https://github.com/jamiejamiebobamie/textGeneration
 Live site:
-https://re-tweet.herokuapp.com
+https://re-tweet.herokuapp.com/api/v1/quote
 
 ## Past Iterations
 

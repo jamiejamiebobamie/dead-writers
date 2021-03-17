@@ -4,7 +4,7 @@ import "./ControlButton.css";
 
 export const ControlButton = (props) => {
   return (
-    <button className={"ControlButton"}>
+    <button className={"ControlButton"} onClick={() => props.clickFunc()}>
       <div
         alt="a head floating in a jar"
         className={props.imgName}
@@ -16,3 +16,4 @@ export const ControlButton = (props) => {
     </button>
   );
 };
+// () => props.fetchQuote()

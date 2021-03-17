@@ -1,7 +1,8 @@
 import reducer from "./reducers";
-import rootSaga from "./sagas";
+import * as sagas from "./sagas";
 import createSagaMiddleware from "redux-saga";
 import { createStore, applyMiddleware, compose } from "redux";
+import { initSagas } from "./initSagas";
 
 const configStore = () => {
   const sagaMiddleware = createSagaMiddleware();
@@ -14,11 +15,10 @@ const configStore = () => {
         })
       : compose;
 
-  // const enhancer = composeEnhancers(applyMiddleware(sagaMiddleware));
+  const enhancer = composeEnhancers(applyMiddleware(sagaMiddleware));
 
-  const store = createStore(reducer); //, enhancer);
-
-  // sagaMiddleware.run(rootSaga);
+  const store = createStore(reducer, enhancer);
+  initSagas(sagaMiddleware);
   return store;
 };
 

@@ -7,7 +7,7 @@
   margin-left: auto;
   margin-right: auto;
 
-  top: 0;
+  top: 5vh;
   bottom: 0;
   margin-top: auto;
   margin-bottom: auto;
@@ -15,8 +15,11 @@
   width: 70vw;
   height: 40vw;
 
+  /* max-width: 800px;
+  max-height: 500px; */
+
   background-color: black;
-  opacity: 0.8;
+  opacity: 0.95;
   border-color: #e2e157;
   /* #fff950 */
   /* #e2e157 */
@@ -25,6 +28,9 @@
   border-radius: 5px;
 
   text-align: center;
+
+  filter: drop-shadow(0 0 0.75rem #56ab82);
+  /* #56ab82 */
 }
 
 .quoteContainer {
@@ -36,7 +42,17 @@
 
 .quoteContent {
   align-self: center;
-  color: #fff950;
-  font-size: 3vw;
-  font-family: "Optima, sans-serif";
+  color: grey;
+  font-size: 2vw;
+  font-family: Optima, sans-serif;
+  line-height: 1.6;
+  margin-left: 7vw;
+  margin-right: 7vw;
+}
+
+.author {
+  position: absolute;
+  right: 0px;
+  margin-right: 5vw;
+  margin-top: 5vw;
 }
