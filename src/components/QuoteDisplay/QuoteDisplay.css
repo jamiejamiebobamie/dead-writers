@@ -1,0 +1,42 @@
+.QuoteDisplay {
+  position: absolute;
+  z-index: 2;
+
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+
+  top: 0;
+  bottom: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+
+  width: 70vw;
+  height: 40vw;
+
+  background-color: black;
+  opacity: 0.8;
+  border-color: #e2e157;
+  /* #fff950 */
+  /* #e2e157 */
+  border-style: solid;
+  border-width: thin;
+  border-radius: 5px;
+
+  text-align: center;
+}
+
+.quoteContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 90%;
+}
+
+.quoteContent {
+  align-self: center;
+  color: #fff950;
+  font-size: 3vw;
+  font-family: "Optima, sans-serif";
+}

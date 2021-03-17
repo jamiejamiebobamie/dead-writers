@@ -24,6 +24,4 @@ const configStore = () => {
 
 const store = configStore();
 
-console.log(store);
-
 export default store;

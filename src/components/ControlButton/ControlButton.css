@@ -18,11 +18,6 @@
   animation: bob 5s steps(55) infinite alternate-reverse;
   opacity: 1;
 }
-/* stand-in */
-.jar_image:hover {
-  animation: pulse 1s infinite alternate-reverse;
-  opacity: 1;
-}
 
 .tweet_image {
   width: 73px;
@@ -34,10 +29,15 @@
   opacity: 1;
 }
 /* stand-in */
-.tweet_image:hover {
+/* .tweet_image:hover {
   animation: pulse 1s infinite alternate-reverse;
   opacity: 1;
-}
+} */
+/* stand-in */
+/* .jar_image:hover {
+  animation: pulse 1s infinite alternate-reverse;
+  opacity: 1;
+} */
 
 @keyframes bob {
   from {
