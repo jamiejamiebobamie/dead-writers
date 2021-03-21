@@ -3,11 +3,15 @@ import React from "react";
 import "./ControlButton.css";
 
 export const ControlButton = (props) => {
+  const buttonInteractionClass = props.disabled ? "disabled" : "enabled";
   return (
-    <button className={"ControlButton"} onClick={() => props.clickFunc()}>
+    <button
+      className={`ControlButton ${buttonInteractionClass}`}
+      onClick={() => props.clickFunc()}
+    >
       <div
-        alt="a head floating in a jar"
-        className={props.imgName}
+        title={props.title}
+        className={`${props.imgName}`}
         id={props.buttonType}
         style={{
           background: `url(${props.fileName})`,
@@ -16,4 +20,3 @@ export const ControlButton = (props) => {
     </button>
   );
 };
-// () => props.fetchQuote()

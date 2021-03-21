@@ -1,5 +1,14 @@
-.BackgroundVideo {
+.dynamic {
   /* background-color: black; */
+  position: absolute;
+  z-index: 1;
+  background-color: transparent;
+  width: 100vw;
+  height: 100vh;
+}
+.static {
+  /* background-color: black; */
+  position: absolute;
   background-color: transparent;
   width: 100vw;
   height: 100vh;

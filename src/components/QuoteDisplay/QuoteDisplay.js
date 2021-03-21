@@ -2,40 +2,48 @@ import React, { useState, useEffect } from "react";
 
 import "./QuoteDisplay.css";
 
-export const QuoteDisplay = (props) => {
-  return (
-    <div className="QuoteDisplay">
-      <button
-        style={{
-          backgroundColor: "transparent",
-          borderColor: "transparent",
-          fontSize: "3vw",
-          marginRight: "2vw",
-          marginTop: "10px",
-          color: "#e2e157",
-          position: "absolute",
-          right: "0px",
-          fontFamily: "monospace",
-        }}
-      >
-        x
-      </button>
-      <div className="quoteContainer">
-        <h3 className="quoteContent">
-          {props.quote}
-          <h4 className="quoteContent author">-{props.author}</h4>
-        </h3>
+export const QuoteDisplay = ({
+  quote,
+  author,
+  clearQuote,
+  isFetching,
+  ...props
+}) => {
+  const display =
+    author === null ? (
+      isFetching ? (
+        <>
+          <div className="lds-ripple">
+            <div></div>
+            <div></div>
+          </div>
+          <h3 className="loadingMsg">generating...</h3>
+        </>
+      ) : null
+    ) : (
+      <div className="QuoteDisplay fade-in">
+        <button
+          className="closeWindowButton flicker"
+          onClick={() => {
+            clearQuote();
+          }}
+        >
+          &#10005;
+        </button>
+        <div className="quoteContainer">
+          <h3 className="quoteContent quote">{quote}</h3>
+          <h4 className="quoteContent author">-{author}</h4>
+        </div>
+        <button
+          onClick={() => {
+            console.log("help button");
+          }}
+          className="questionMark"
+        >
+          &#63;
+        </button>
       </div>
-    </div>
-  );
-};
-// useEffect(() => {
-//
-// }, []);
-// {smudges}
+    );
 
-// Yet do I may speak; the world that which seems as my poor name
-// rehearse? And shall in walls of mine own life And I will seek (my
-// weary travel’s end) Doth homage to stop any Syracusian born Come then
-// you fled from many quirks of a lawful race, Which you are my sake even
-// I my soul Doth half so fair a dame to make a sovereign to the Capitol.
+  return display;
+};
