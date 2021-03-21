@@ -23,7 +23,9 @@ export function* fetchQuoteSaga() {
   while (true) {
     // don't use actionChannel. it catches all presses to the jar button
     // only want one press at a time.
+    // const quoteRequest = yield take(fetchQuotesBuffer);
     const quoteRequest = yield take(actionTypes.FETCH_QUOTE);
+
     yield put(setIsFetching());
 
     // ---- API ----
@@ -57,7 +59,7 @@ export function* fetchQuoteSaga() {
       Yaya, hahaha who who who who heheheheheheheheh what wow. lol.
       Hahah lol. Hehethathatha hhshdsdhsdh. Jajajssdmsdsm.`,
     };
-    yield delay(2500);
+    yield delay(500);
     // ------------
 
     const ALPHA = {

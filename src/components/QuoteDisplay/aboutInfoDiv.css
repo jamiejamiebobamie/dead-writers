@@ -1,0 +1,33 @@
+.aboutDiv {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  height: 90%;
+  justify-content: space-around;
+  margin-left: 8%;
+  margin-right: 5%;
+}
+
+.innerDiv {
+  display: flex;
+  justify-content: flex-start;
+  width: 90%;
+  height: 100%;
+  align-self: center;
+}
+
+h1,
+p,
+li {
+  align-self: flex-start;
+  text-align: left;
+  color: #6fa38d;
+  font-size: 2vw;
+  font-family: Optima, sans-serif;
+  line-height: 1.6;
+  margin-right: 3vw;
+}
+ul,
+p {
+  width: 30vw;
+}

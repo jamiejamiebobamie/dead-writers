@@ -1,5 +1,7 @@
-import React, { useState, useEffect } from "react";
-
+import React, { useState } from "react";
+import { loadingMsgDiv } from "./loadingMsgDiv";
+import { aboutInfoDiv } from "./aboutInfoDiv";
+import { quoteDiv } from "./quoteDiv";
 import "./QuoteDisplay.css";
 
 export const QuoteDisplay = ({
@@ -9,41 +11,34 @@ export const QuoteDisplay = ({
   isFetching,
   ...props
 }) => {
-  const display =
-    author === null ? (
-      isFetching ? (
-        <>
-          <div className="lds-ripple">
-            <div></div>
-            <div></div>
-          </div>
-          <h3 className="loadingMsg">generating...</h3>
-        </>
-      ) : null
-    ) : (
-      <div className="QuoteDisplay fade-in">
-        <button
-          className="closeWindowButton flicker"
-          onClick={() => {
-            clearQuote();
-          }}
-        >
-          &#10005;
-        </button>
-        <div className="quoteContainer">
-          <h3 className="quoteContent quote">{quote}</h3>
-          <h4 className="quoteContent author">-{author}</h4>
-        </div>
-        <button
-          onClick={() => {
-            console.log("help button");
-          }}
-          className="questionMark"
-        >
-          &#63;
-        </button>
-      </div>
-    );
+  const [aboutIsToggled, toggleAboutDiv] = useState(false);
 
-  return display;
+  const contentDiv = aboutIsToggled ? aboutInfoDiv() : quoteDiv(quote, author);
+  const mainDiv = (
+    <div className="QuoteDisplay fade-in">
+      <button
+        className="closeWindowButton flicker"
+        onClick={() => {
+          clearQuote();
+        }}
+        title="close"
+      >
+        &#10005;
+      </button>
+      {contentDiv}
+      <button
+        className="questionMark"
+        onClick={() => {
+          toggleAboutDiv(!aboutIsToggled);
+        }}
+        title="About"
+      >
+        &#63;
+      </button>
+    </div>
+  );
+  const _quoteDisplay =
+    author === null ? (isFetching ? loadingMsgDiv : null) : mainDiv;
+
+  return _quoteDisplay;
 };

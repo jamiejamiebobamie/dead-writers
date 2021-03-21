@@ -9,6 +9,8 @@ const AUTHOR_INDEX_LOOKUP = {
   Carroll: 4,
   Shakespeare: 5,
   Lovecraft: 6,
+  end: 7,
+  idle: 8,
 };
 
 export const videoIndexReducer = (

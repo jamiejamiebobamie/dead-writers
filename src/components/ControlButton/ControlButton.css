@@ -87,9 +87,9 @@
   }
 }
 
-.pulse {
-  animation: pulse 1s infinite alternate;
-}
+/* .pulse {
+  animation: pulse 2s infinite alternate;
+} */
 
 @keyframes pulse {
   0% {

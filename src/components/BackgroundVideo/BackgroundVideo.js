@@ -1,16 +1,12 @@
-import React, { useState, useEffect, useRef } from "react";
-
+import React, { useEffect, useRef } from "react";
 import "./BackgroundVideo.css";
 
-export const BackgroundVideo = ({ index }) => {
+export const BackgroundVideo = ({ index, addVideoPlayIndex }) => {
   const videoRef = useRef();
-  let myVideo;
-  const [duration, setDuration] = useState(null);
-  useEffect(() => {
-    myVideo = document.getElementById("backgroundVideo");
-    videoRef.current = myVideo;
-  }, []);
 
+  useEffect(() => {
+    videoRef.current = document.getElementById("backgroundVideo");
+  }, [index]); // lookup passing in a callback function to useEffect
   return (
     <>
       <video
@@ -23,16 +19,25 @@ export const BackgroundVideo = ({ index }) => {
         playsInline
         className="dynamic"
         onLoadStart={(e) => {
-          if (index !== 8)
-            setTimeout(() => {
-              let dur = videoRef.current.duration;
+          if (index !== 8) {
+            if (index === 7) {
               setTimeout(() => {
-                videoRef.current.setAttribute(
-                  "src",
-                  `../../../assets/videos/8.mp4`
-                ); // Reset the video clip to idle.
-              }, dur * 1000 - 500);
-            }, 500);
+                let dur = videoRef.current.duration;
+                setTimeout(() => {
+                  // boot the user to twitter
+                  window.location.href = "https://twitter.com/writers_dead";
+                }, dur * 1000 - 500);
+              }, 500);
+            } else {
+              setTimeout(() => {
+                let dur = videoRef.current.duration;
+                setTimeout(() => {
+                  // Reset the video clip to idle.
+                  addVideoPlayIndex({ author: "idle" });
+                }, dur * 1000 - 500);
+              }, 500);
+            }
+          }
         }}
       ></video>
       <video

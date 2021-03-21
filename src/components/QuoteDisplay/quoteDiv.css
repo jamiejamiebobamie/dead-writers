@@ -1,0 +1,35 @@
+.quoteContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 85%;
+  /* margin-top: 5vh; */
+}
+
+.quoteContent {
+  align-self: center;
+  color: #6fa38d;
+  font-size: 2vw;
+  font-family: Optima, sans-serif;
+  line-height: 1.6;
+  margin-left: 7vw;
+  margin-right: 7vw;
+  /* #56ab82 */
+  /* #90e0c0 */
+  /* #72b097 */
+  /* #fff950 */
+  /* #e2e157 */
+  /* #9debcb */
+  /* #6fa38d */
+}
+
+.quote {
+  /* text-align: center; */
+}
+
+.author {
+  /* position: absolute; */
+  align-self: flex-end;
+  margin-right: 10vw;
+  /* margin-top: .5vh; */
+}

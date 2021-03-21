@@ -2,19 +2,24 @@ import React from "react";
 
 import "./ControlButton.css";
 
-export const ControlButton = (props) => {
-  const buttonInteractionClass = props.disabled ? "disabled" : "enabled";
+export const ControlButton = ({
+  disabled,
+  clickFunc,
+  imgName,
+  fileName,
+  title,
+}) => {
+  const buttonInteractionClass = disabled ? "disabled" : "enabled";
   return (
     <button
       className={`ControlButton ${buttonInteractionClass}`}
-      onClick={() => props.clickFunc()}
+      onClick={() => clickFunc()}
     >
       <div
-        title={props.title}
-        className={`${props.imgName}`}
-        id={props.buttonType}
+        title={title}
+        className={`${imgName}`}
         style={{
-          background: `url(${props.fileName})`,
+          background: `url(${fileName})`,
         }}
       />
     </button>
