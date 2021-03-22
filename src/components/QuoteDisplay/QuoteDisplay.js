@@ -30,7 +30,6 @@ export const QuoteDisplay = ({ quote, author, clearQuote, isFetching }) => {
       </button>
     </div>
   );
-  // author = "null";
   const _quoteDisplay =
     author === null ? (isFetching ? loadingMsgDiv() : null) : mainDiv;
 

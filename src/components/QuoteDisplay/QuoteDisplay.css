@@ -15,22 +15,13 @@
   width: 70vw;
   height: 40vw;
 
-  /* max-width: 800px;
-  max-height: 500px; */
-
   background-color: black;
   opacity: 0.85;
-  /* border-color: #e2e157; */
-  /* #fff950 */
-  /* #e2e157 */
   border-style: solid;
   border-width: thin;
   border-radius: 10px;
 
   text-align: center;
-
-  /* #56ab82 */
-
   filter: drop-shadow(0 0 1.5rem #56ab82);
 
   display: flex;
@@ -38,50 +29,6 @@
   justify-content: center;
 }
 
-.closeWindowButton {
-  background-color: transparent;
-  border-color: transparent;
-  font-size: 3vw;
-  margin-right: 2vw;
-  margin-top: 1vw;
-  right: 0px;
-  top: 0px;
-  color: #9debcb;
-  position: absolute;
-  /* right: 1.5em; */
-  /* font-family: Comic Sans MS, sans-serif; */
-}
-
-.flicker {
-  animation: flickerAnim ease 5s infinite;
-  -webkit-animation: flickerAnim ease 5s infinite;
-  -moz-animation: flickerAnim ease 5s infinite;
-  -o-animation: flickerAnim ease 5s infinite;
-  -ms-animation: flickerAnim ease 5s infinite;
-}
-
-@keyframes flickerAnim {
-  0% {
-    opacity: 1;
-  }
-  25% {
-    opacity: 0.8;
-  }
-  50% {
-    opacity: 0.65;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-.fade-in {
-  animation: fadeIn ease 1s;
-  -webkit-animation: fadeIn ease 1s;
-  -moz-animation: fadeIn ease 1s;
-  -o-animation: fadeIn ease 1s;
-  -ms-animation: fadeIn ease 1s;
-}
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -127,6 +74,49 @@
   }
 }
 
+.closeWindowButton {
+  background-color: transparent;
+  border-color: transparent;
+  font-size: 3vw;
+  margin-right: 2vw;
+  margin-top: 1vw;
+  right: 0px;
+  top: 0px;
+  color: #9debcb;
+  position: absolute;
+}
+
+.flicker {
+  animation: flickerAnim ease 5s infinite;
+  -webkit-animation: flickerAnim ease 5s infinite;
+  -moz-animation: flickerAnim ease 5s infinite;
+  -o-animation: flickerAnim ease 5s infinite;
+  -ms-animation: flickerAnim ease 5s infinite;
+}
+
+@keyframes flickerAnim {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 0.65;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn ease 1s;
+  -webkit-animation: fadeIn ease 1s;
+  -moz-animation: fadeIn ease 1s;
+  -o-animation: fadeIn ease 1s;
+  -ms-animation: fadeIn ease 1s;
+}
+
 .questionMark {
   position: absolute;
   left: 0px;
@@ -140,8 +130,6 @@
   color: #fff950;
   font-size: 3vw;
   font-family: Courier new, sans-serif;
-
-  /* background-color: #fff950; */
 
   background-color: transparent;
 
@@ -166,7 +154,6 @@
 
 @media screen and (orientation: portrait) and (max-width: 736px) {
   .questionMark {
-    /* font-size: 2vw; */
     width: 5vw;
     height: 5vw;
   }

@@ -1,5 +1,5 @@
 import React from "react";
-import { ControlButton } from "../ControlButton/ControlButton";
+import { ControlButton } from "../ControlButton";
 import "./Controls.css";
 
 export const Controls = ({

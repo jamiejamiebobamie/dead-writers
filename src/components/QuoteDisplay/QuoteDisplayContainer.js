@@ -1,16 +1,15 @@
 import { connect } from "react-redux";
 import { QuoteDisplay } from "./QuoteDisplay";
-
+import {
+  quoteSelector,
+  indexSelector,
+  fetchStatusSelector,
+} from "../../redux/selectors";
 import { clearQuote } from "../../redux/actions";
 
-const mapStateToProps = (state) => {
-  return {
-    quote: state.quoteReducer.quote,
-    author: state.quoteReducer.author,
-    index: state.videoIndexReducer.index,
-    isFetching: state.fetchReducer.isFetching,
-  };
-};
+const mapStateToProps = (state) =>
+  Object.assign({}, quoteSelector(state), fetchStatusSelector(state));
+
 const mapDispatchToProps = { clearQuote };
 
 export const QuoteDisplayContainer = connect(

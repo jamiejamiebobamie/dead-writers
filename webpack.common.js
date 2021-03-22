@@ -40,12 +40,20 @@ module.exports = (env) => {
           use: ["style-loader", "css-loader", "sass-loader"],
         },
         {
-          test: /\.(png|jpe?g|gif|svg|ico)$/,
+          test: /\.(ico)$/,
           use: [{ loader: "file-loader?name=assets/[name].[ext]" }],
         },
         {
+          test: /\.(png|jpe?g|gif|svg|ico)$/,
+          use: [{ loader: "file-loader?name=assets/imgs/[name].[ext]" }],
+        },
+        {
+          test: /\.(mp4)$/,
+          use: [{ loader: "file-loader?name=assets/videos/[name].[ext]" }],
+        },
+        {
           test: /\.(eot|ttf|wof|wof2)$/,
-          use: [{ loader: "file-loader?name=/assets/fonts/[name].[ext]" }],
+          use: [{ loader: "file-loader?name=assets/fonts/[name].[ext]" }],
         },
       ],
     },

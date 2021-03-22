@@ -6,7 +6,10 @@ export const BackgroundVideo = ({ index, addVideoPlayIndex }) => {
 
   useEffect(() => {
     videoRef.current = document.getElementById("backgroundVideo");
-  }, [index]); // lookup passing in a callback function to useEffect
+  }, [index]);
+  // the video pops when it loads a new video for src.
+  // the 'static' video plays the idle clip on loop behind the 'dynamic' video
+  // to hide the transition.
   return (
     <>
       <video
@@ -19,6 +22,17 @@ export const BackgroundVideo = ({ index, addVideoPlayIndex }) => {
         playsInline
         className="dynamic"
         onLoadStart={(e) => {
+          // 'onEnded' video attribute was not working for some reason.
+
+          // this uses two nested timeOuts to reset the video back to idle after
+          // a video other than idle (index !== 8) is done playing.
+
+          // the first timeout waits for the mounted DOM element to initialize
+          // and then grabs the video's duration attribute
+          // to set the next timeOut.
+
+          // if the video is the exit video, send the user to the dead_writers
+          // twitter acount.
           if (index !== 8) {
             if (index === 7) {
               setTimeout(() => {

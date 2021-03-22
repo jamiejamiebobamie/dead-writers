@@ -53,17 +53,6 @@
   transform: scale(0.95);
 }
 
-/* stand-in */
-/* .tweet_image:hover {
-  animation: pulse 1s infinite alternate-reverse;
-  opacity: 1;
-} */
-/* stand-in */
-/* .jar_image:hover {
-  animation: pulse 1s infinite alternate-reverse;
-  opacity: 1;
-} */
-
 @keyframes bob {
   from {
     background-position-x: 0px;
@@ -100,10 +89,6 @@
     transform: translateY(0px) scale(0.9);
   }
 }
-
-/* .pulse {
-  animation: pulse 2s infinite alternate;
-} */
 
 @keyframes pulse {
   0% {

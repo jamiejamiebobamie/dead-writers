@@ -11,8 +11,6 @@
 
 @media screen and (orientation: landscape) and (max-width: 736px) {
   .Controls {
-    transform: scale(1);
-    /* background-color: pink; */
     opacity: 0.5;
     justify-content: flex-start;
     width: 50vw;
