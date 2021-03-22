@@ -44,7 +44,7 @@ module.exports = (env) => {
           use: [{ loader: "file-loader?name=assets/[name].[ext]" }],
         },
         {
-          test: /\.(png|jpe?g|gif|svg|ico)$/,
+          test: /\.(png)$/,
           use: [{ loader: "file-loader?name=assets/imgs/[name].[ext]" }],
         },
         {
