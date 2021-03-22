@@ -17,7 +17,7 @@ export const ControlButton = ({
     >
       <div
         title={title}
-        className={`${imgName}`}
+        className={`${imgName} `}
         style={{
           background: `url(${fileName})`,
         }}

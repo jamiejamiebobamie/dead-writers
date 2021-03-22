@@ -163,3 +163,11 @@
 .closeWindowButton:active {
   transform: translateY(4px);
 }
+
+@media screen and (orientation: portrait) and (max-width: 736px) {
+  .questionMark {
+    /* font-size: 2vw; */
+    width: 5vw;
+    height: 5vw;
+  }
+}

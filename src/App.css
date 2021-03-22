@@ -6,3 +6,33 @@ body {
   margin-top: -7.8px;
   margin-left: -7.8px;
 }
+
+/* @media (min-width: 300px) {
+  body {
+    background-color: red;
+  }
+}
+
+@media (min-width: 640px) {
+  body {
+    background-color: red;
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    background-color: green;
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    background-color: blue;
+  }
+}
+
+@media (min-width: 1280px) {
+  body {
+    background-color: purple;
+  }
+} */

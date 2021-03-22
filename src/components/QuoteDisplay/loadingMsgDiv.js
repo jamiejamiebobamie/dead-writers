@@ -1,7 +1,7 @@
 import React from "react";
 import "./loadingMsgDiv.css";
 
-export const loadingMsgDiv = (
+export const loadingMsgDiv = () => (
   <>
     <div className="lds-ripple">
       <div></div>

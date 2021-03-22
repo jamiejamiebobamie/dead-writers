@@ -4,15 +4,8 @@ import { aboutInfoDiv } from "./aboutInfoDiv";
 import { quoteDiv } from "./quoteDiv";
 import "./QuoteDisplay.css";
 
-export const QuoteDisplay = ({
-  quote,
-  author,
-  clearQuote,
-  isFetching,
-  ...props
-}) => {
+export const QuoteDisplay = ({ quote, author, clearQuote, isFetching }) => {
   const [aboutIsToggled, toggleAboutDiv] = useState(false);
-
   const contentDiv = aboutIsToggled ? aboutInfoDiv() : quoteDiv(quote, author);
   const mainDiv = (
     <div className="QuoteDisplay fade-in">
@@ -37,8 +30,9 @@ export const QuoteDisplay = ({
       </button>
     </div>
   );
+  // author = "null";
   const _quoteDisplay =
-    author === null ? (isFetching ? loadingMsgDiv : null) : mainDiv;
+    author === null ? (isFetching ? loadingMsgDiv() : null) : mainDiv;
 
   return _quoteDisplay;
 };

@@ -1,15 +1,59 @@
-.dynamic {
-  /* background-color: black; */
-  position: absolute;
-  z-index: 1;
-  background-color: transparent;
-  width: 100vw;
-  height: 100vh;
-}
+.dynamic,
 .static {
-  /* background-color: black; */
   position: absolute;
   background-color: transparent;
   width: 100vw;
   height: 100vh;
 }
+.dynamic {
+  z-index: 1;
+}
+
+/* need to change every component to be different */
+/* .rotated {
+  transform: rotate(90deg) translateX(100vw) translateY(-50vw);
+} */
+
+/* @media (min-width: 300px) {
+  .dynamic,
+  .static {
+    transform: rotate(90deg);
+
+    top: 21.75vh;
+    left: -39vw;
+
+    width: 100vh;
+    height: 100vw;
+  }
+}
+
+@media (max-width: 320px) {
+  .dynamic,
+  .static {
+    transform: rotate(90deg);
+
+    top: 21.75vh;
+    left: -39vw;
+
+    width: 100vh;
+    height: 100vw;
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    background-color: green;
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    background-color: blue;
+  }
+}
+
+@media (min-width: 1280px) {
+  body {
+    background-color: purple;
+  }
+} */
