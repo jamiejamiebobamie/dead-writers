@@ -2,6 +2,9 @@ import React from "react";
 import { ControlButton } from "../ControlButton";
 import "./Controls.css";
 
+import bird from "-!file-loader!../../../assets/imgs/sprite_twitter_icon_39sprites_73by71tile.png";
+import head from "-!file-loader!../../../assets/imgs/sprite_jar_icon_55sprites_129by130tile.png";
+
 export const Controls = ({
   fetchQuote,
   tweetQuote,
@@ -16,14 +19,14 @@ export const Controls = ({
         imgName={
           author || exitVideoIsPlaying ? "tweet_image fly" : "tweet_image"
         }
-        fileName="assets/imgs/sprite_twitter_icon_39sprites_73by71tile.png"
+        fileName={bird}
         clickFunc={author ? tweetQuote : () => {}}
         title="Tweet it!"
         disabled={author ? false : true}
       />
       <ControlButton
         imgName="jar_image"
-        fileName="assets/imgs/sprite_jar_icon_55sprites_129by130tile.png"
+        fileName={head}
         clickFunc={() => {
           clearQuote();
           fetchQuote();
@@ -33,3 +36,6 @@ export const Controls = ({
     </div>
   );
 };
+// before webpack
+// fileName="assets/imgs/sprite_twitter_icon_39sprites_73by71tile.png"
+// fileName="assets/imgs/sprite_jar_icon_55sprites_129by130tile.png"

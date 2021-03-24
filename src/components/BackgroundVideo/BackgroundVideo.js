@@ -1,7 +1,29 @@
 import React, { useEffect, useRef } from "react";
 import "./BackgroundVideo.css";
 
+// for webpack
+import zero from "-!file-loader!../../../assets/videos/0.mp4";
+import one from "-!file-loader!../../../assets/videos/1.mp4";
+import two from "-!file-loader!../../../assets/videos/2.mp4";
+import three from "-!file-loader!../../../assets/videos/3.mp4";
+import four from "-!file-loader!../../../assets/videos/4.mp4";
+import five from "-!file-loader!../../../assets/videos/5.mp4";
+import six from "-!file-loader!../../../assets/videos/6.mp4";
+import seven from "-!file-loader!../../../assets/videos/7.mp4";
+import eight from "-!file-loader!../../../assets/videos/8.mp4";
+
 export const BackgroundVideo = ({ index, addVideoPlayIndex }) => {
+  const videoLookup = {
+    0: zero,
+    1: one,
+    2: two,
+    3: three,
+    4: four,
+    5: five,
+    6: six,
+    7: seven,
+    8: eight,
+  };
   const videoRef = useRef();
 
   useEffect(() => {
@@ -13,7 +35,7 @@ export const BackgroundVideo = ({ index, addVideoPlayIndex }) => {
   return (
     <>
       <video
-        src={`../../../assets/videos/${index}.mp4`}
+        src={videoLookup[index]}
         play="true"
         autoPlay
         muted
@@ -55,8 +77,8 @@ export const BackgroundVideo = ({ index, addVideoPlayIndex }) => {
         }}
       ></video>
       <video
-        src={`../../../assets/videos/8.mp4`}
         play="true"
+        src={eight}
         autoPlay
         muted
         loop
@@ -66,3 +88,9 @@ export const BackgroundVideo = ({ index, addVideoPlayIndex }) => {
     </>
   );
 };
+
+// before webpack:
+// dynamic
+// src={`../../../assets/videos/${index}.mp4`}
+// static
+// src={`../../../assets/videos/8.mp4`}
