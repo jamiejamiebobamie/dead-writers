@@ -26,37 +26,37 @@ export function* fetchQuoteSaga() {
     yield put(setIsFetching());
 
     // ---- API ----
-    // const response = yield call(
-    //   fetch,
-    //   "https://re-tweet.herokuapp.com/api/v1/quote"
-    // );
-    // const data = yield apply(response, response.json);
+    const response = yield call(
+      fetch,
+      "https://re-tweet.herokuapp.com/api/v1/quote"
+    );
+    const data = yield apply(response, response.json);
     // ------------
 
     // ------- fake API below --------
-    const AUTHOR_INDEX_LOOKUP = {
-      Grimm: 0,
-      Poe: 1,
-      Wilde: 2,
-      Woolf: 3,
-      Carroll: 4,
-      Shakespeare: 5,
-      Lovecraft: 6,
-    };
-
-    const arr = Object.keys(AUTHOR_INDEX_LOOKUP);
-    const randIndex = Math.floor(Math.random() * 7);
-    const randAuthor = arr[randIndex];
-
-    const data = {
-      author: randAuthor,
-      quote: `This is a test quote.
-      This is a long quote with a lot of words.
-      How is this working? Hahah. Yeah, yay. Yay. Haha he theeheh, lol.
-      Yaya, hahaha who who who who heheheheheheheheh what wow. lol.
-      Hahah lol. Hehethathatha hhshdsdhsdh. Jajajssdmsdsm.`,
-    };
-    yield delay(500);
+    // const AUTHOR_INDEX_LOOKUP = {
+    //   Grimm: 0,
+    //   Poe: 1,
+    //   Wilde: 2,
+    //   Woolf: 3,
+    //   Carroll: 4,
+    //   Shakespeare: 5,
+    //   Lovecraft: 6,
+    // };
+    //
+    // const arr = Object.keys(AUTHOR_INDEX_LOOKUP);
+    // const randIndex = Math.floor(Math.random() * 7);
+    // const randAuthor = arr[randIndex];
+    //
+    // const data = {
+    //   author: randAuthor,
+    //   quote: `This is a test quote.
+    //   This is a long quote with a lot of words.
+    //   How is this working? Hahah. Yeah, yay. Yay. Haha he theeheh, lol.
+    //   Yaya, hahaha who who who who heheheheheheheheh what wow. lol.
+    //   Hahah lol. Hehethathatha hhshdsdhsdh. Jajajssdmsdsm.`,
+    // };
+    // yield delay(500);
     // ------------
 
     const ALPHA = {
